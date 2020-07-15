@@ -7,7 +7,6 @@ const Header = () => {
     <header
       css={css`
         background-color: white;
-        padding: 0.4rem;
       `}
     >
       <Navegacion />

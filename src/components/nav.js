@@ -8,6 +8,11 @@ const NavLink = styled(Link)`
   text-decoration: none;
   font-family: "Roboto", serif;
   font-weight: 700;
+  padding: 1rem;
+  &:hover {
+    color: white;
+    background-color: #337ab7;
+  }
 `
 
 const Navegacion = () => {
@@ -17,8 +22,12 @@ const Navegacion = () => {
         css={css`
           max-width: 1200px;
           margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
           @media (min-width: 768px) {
-            display: flex;
+            flex-direction: row;
             align-items: center;
             justify-content: space-between;
           }

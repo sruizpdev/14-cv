@@ -18,6 +18,31 @@ const Layout = props => {
           h1 {
             font-family: "Roboto", serif;
           }
+          .container {
+            background-color: white;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            margin-top: 2rem;
+          }
+          .row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+          }
+          .column-one {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 100%;
+            flex: 1;
+          }
+          .column-two {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 100%;
+            flex: 3;
+          }
         `}
       />
 
