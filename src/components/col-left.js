@@ -5,7 +5,7 @@ import SocialProfiles from "./social-profiles"
 import PersonalInfo from "./personal-info"
 
 const Separator = styled.div`
-  border-bottom: 1px solid #f5f5f5;
+  border-bottom: 2px solid #f5f5f5;
 `
 const H3 = styled.h3`
   font-family: "PT Sans", sans-serif;
@@ -16,7 +16,6 @@ const H3 = styled.h3`
 const ColLeft = () => {
   return (
     <>
-      <H3>Personal information</H3>
       <PersonalInfo />
       <Separator></Separator>
       <H3>Attachments</H3>

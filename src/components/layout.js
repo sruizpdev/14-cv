@@ -38,7 +38,6 @@ const Layout = props => {
           }
           .col-right {
             margin-left: 30px;
-            padding: 30px;
             @media (min-width: 480px) {
               flex: 3;
             }
