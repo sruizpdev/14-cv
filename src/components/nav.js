@@ -6,9 +6,9 @@ import { css } from "@emotion/core"
 const NavLink = styled(Link)`
   color: grey;
   text-decoration: none;
-  font-family: "Roboto", serif;
-  font-weight: 700;
-  padding: 1rem;
+  font-family: "PT Sans", sans-serif;
+
+  padding: 2rem;
   &:hover {
     color: white;
     background-color: #337ab7;
@@ -26,7 +26,7 @@ const Navegacion = () => {
           flex-direction: column;
           align-items: center;
 
-          @media (min-width: 768px) {
+          @media (min-width: 480px) {
             flex-direction: row;
             align-items: center;
             justify-content: space-between;

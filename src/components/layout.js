@@ -16,13 +16,14 @@ const Layout = props => {
             font-size: 1.6rem;
           }
           h1 {
-            font-family: "Roboto", serif;
+            font-family: "PT Sans", sans-serif;
+          }
+          .line {
+            border-bottom: 1px solid #f5f5f5;
           }
           .container {
-            background-color: white;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem;
             margin-top: 2rem;
           }
           .row {
@@ -31,17 +32,30 @@ const Layout = props => {
             flex-wrap: wrap;
             width: 100%;
           }
-          .column-one {
+          .column {
+            padding-left: 30px;
             display: flex;
             flex-direction: column;
             flex-basis: 100%;
             flex: 1;
           }
+          .column-2 {
+            flex: 2;
+          }
+          .column-one,
           .column-two {
             display: flex;
             flex-direction: column;
             flex-basis: 100%;
-            flex: 3;
+            flex: 1;
+            background-color: white;
+          }
+          .column-two {
+            margin-left: 30px;
+            padding: 30px;
+            @media (min-width: 480px) {
+              flex: 3;
+            }
           }
         `}
       />
@@ -53,7 +67,7 @@ const Layout = props => {
           href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap"
           rel="stylesheet"
         />
       </Helmet>
