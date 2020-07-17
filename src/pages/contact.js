@@ -1,10 +1,32 @@
 import React from "react"
-import Layout from "../components/layout"
 
-const IndexPage = () => (
+import { css } from "@emotion/core"
+import Layout from "../components/layout"
+import ColLeft from "../components/col-left"
+import ContactForm from "../components/contact-form"
+
+const ContactMePage = () => (
   <Layout>
-    <h1>contact page</h1>
+    <div className="container">
+      <div className="row">
+        <div className="col-left">
+          <ColLeft></ColLeft>
+        </div>
+        <div className="col-right">
+          <h1
+            css={css`
+              text-transform: uppercase;
+              margin: 0;
+            `}
+          >
+            Contact me
+          </h1>
+          <ContactForm></ContactForm>
+          <div className="line"></div>
+        </div>
+      </div>
+    </div>
   </Layout>
 )
 
-export default IndexPage
+export default ContactMePage

@@ -1,7 +1,27 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
+import styled from "@emotion/styled"
 import { css } from "@emotion/core"
+
+const Row = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  line-height: 3rem;
+`
+const Col = styled.div`
+  padding-left: 20px;
+  display: flex;
+  flex-direction: col;
+  flex-basis: 100%;
+  flex: 1;
+  font-weight: bold;
+`
+const Col2 = styled.div`
+  flex: 2;
+`
 
 const PersonalInfo = () => {
   const aboutInfo = useStaticQuery(graphql`
@@ -9,73 +29,65 @@ const PersonalInfo = () => {
       allDatoCmsAboutMe {
         edges {
           node {
-            name
-            phone
-            email
-            github
             picture {
               fluid {
                 ...GatsbyDatoCmsFluid
               }
             }
+            name
+            phone
+            email
+            github
+            website
           }
         }
       }
     }
   `)
   const {
+    picture,
     name,
     phone,
     email,
     github,
-    picture,
+    website,
   } = aboutInfo.allDatoCmsAboutMe.edges[0].node
 
   return (
     <>
-      <h3
-        css={css`
-          color: gray;
-          font-family: "PT Sans", sans-serif;
-          text-transform: uppercase;
-          text-align: center;
-        `}
-      >
-        Personal information
-      </h3>
-      <Image fluid={picture.fluid} alt="" />
-      <div className="row">
-        <div className="column">Name</div>
-        <div className="column-2">{name}</div>
+      <div className="animated fadeIn ">
+        <Image
+          css={css`
+            margin-bottom: 20px;
+          `}
+          fluid={picture.fluid}
+          alt="name"
+        />
+        <Row>
+          <Col>Name</Col>
+          <Col2>{name}</Col2>
+        </Row>
+        <Row>
+          <Col>Phone</Col>
+          <Col2>{phone}</Col2>
+        </Row>
+        <Row>
+          <Col className="col">Email</Col>
+          <Col2>{email}</Col2>
+        </Row>
+        <Row>
+          <Col>GitHub</Col>
+          <Col2>{github}</Col2>
+        </Row>
+        <Row
+          css={css`
+            margin-bottom: 20px;
+          `}
+        >
+          <Col>Web</Col>
+          <Col2>{website}</Col2>
+        </Row>
       </div>
-      <div className="row">
-        <div className="column">Phone</div>
-        <div className="column-2">{phone}</div>
-      </div>
-      <div className="row">
-        <div className="column">Email</div>
-        <div className="column-2">{email}</div>
-      </div>
-      <div
-        className="row"
-        css={css`
-          border-bottom: 1px solid #f5f5f5;
-        `}
-      >
-        <div className=" column">GitHub</div>
-        <div className=" column-2">{github}</div>
-      </div>
-      <h3
-        css={css`
-          color: gray;
-          font-family: "PT Sans", sans-serif;
-          text-transform: uppercase;
-          text-align: center;
-          border-bottom: 1px solid #f5f5f5;
-        `}
-      >
-        Attachments
-      </h3>
     </>
   )
 }

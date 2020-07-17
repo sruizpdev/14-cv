@@ -9,18 +9,14 @@ const Layout = props => {
         styles={css`
           html {
             font-size: 62.5%;
+            font-family: "PT Sans", sans-serif;
           }
           body {
             background-color: #f5f5f5;
             font-size: 16px;
             font-size: 1.6rem;
           }
-          h1 {
-            font-family: "PT Sans", sans-serif;
-          }
-          .line {
-            border-bottom: 1px solid #f5f5f5;
-          }
+
           .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -32,30 +28,55 @@ const Layout = props => {
             flex-wrap: wrap;
             width: 100%;
           }
-          .column {
-            padding-left: 30px;
-            display: flex;
-            flex-direction: column;
-            flex-basis: 100%;
-            flex: 1;
-          }
-          .column-2 {
-            flex: 2;
-          }
-          .column-one,
-          .column-two {
+          .col-left,
+          .col-right {
             display: flex;
             flex-direction: column;
             flex-basis: 100%;
             flex: 1;
             background-color: white;
           }
-          .column-two {
+          .col-right {
             margin-left: 30px;
             padding: 30px;
             @media (min-width: 480px) {
               flex: 3;
             }
+          }
+          .iconify {
+            width: 40px;
+            height: 40px;
+            color: gray;
+            border: 1px solid #f5f5f5;
+            padding: 10px;
+            margin: 10px;
+          }
+          .animated {
+            -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+          }
+
+          .fast {
+            -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+          }
+
+          @keyframes fadeIn {
+            from {
+              opacity: 0;
+            }
+
+            to {
+              opacity: 1;
+            }
+          }
+
+          .fadeIn {
+            animation-name: fadeIn;
           }
         `}
       />
@@ -70,6 +91,7 @@ const Layout = props => {
           href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap"
           rel="stylesheet"
         />
+        <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
       </Helmet>
       <Header />
       {props.children}

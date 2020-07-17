@@ -1,8 +1,30 @@
 import React from "react"
+import styled from "@emotion/styled"
+
+const Social = styled.div`
+  display: flex;
+  justify-content: space-around;
+`
 const SocialProfiles = () => {
   return (
     <>
-      <p>Aqui las redes sociales</p>
+      <Social>
+        <span
+          class="iconify"
+          data-icon="ant-design:linkedin-outlined"
+          data-inline="false"
+        ></span>
+        <span
+          class="iconify"
+          data-icon="ant-design:github-filled"
+          data-inline="false"
+        ></span>
+        <span
+          class="iconify"
+          data-icon="ant-design:skype-outlined"
+          data-inline="false"
+        ></span>
+      </Social>
     </>
   )
 }

@@ -2,22 +2,16 @@ import React from "react"
 
 import { css } from "@emotion/core"
 import Layout from "../components/layout"
-import PersonalInfo from "../components/personal-info"
-import Attachments from "../components/attachments"
-import SocialProfiles from "../components/social-profiles"
-import ContactForm from "../components/contact-form"
+import ColLeft from "../components/col-left"
 
 const PortfolioPage = () => (
   <Layout>
     <div className="container">
       <div className="row">
-        <div className="column-one">
-          <PersonalInfo />
-          <Attachments />
-          <SocialProfiles />
-          <ContactForm />
+        <div className="col-left">
+          <ColLeft></ColLeft>
         </div>
-        <div className="column-two">
+        <div className="col-right">
           <h1
             css={css`
               text-transform: uppercase;
