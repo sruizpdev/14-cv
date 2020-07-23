@@ -9,7 +9,6 @@ const Skills = () => {
         edges {
           node {
             skill {
-              skillId
               skillName
               skillKnowledge
             }
@@ -20,7 +19,7 @@ const Skills = () => {
   `)
 
   const array_skills = skills.allDatoCmsSkill.edges[0].node.skill
-  console.log(array_skills)
+
   return (
     <>
       {array_skills.map(skill => (

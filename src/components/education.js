@@ -19,7 +19,7 @@ const Education = () => {
     }
   `)
   const edu_array = edu.allDatoCmsEducation.edges[0].node.education
-  console.log(edu_array)
+
   return (
     <>
       {edu_array.map(edu_item => (
