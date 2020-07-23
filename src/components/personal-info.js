@@ -24,9 +24,9 @@ const Col2 = styled.div`
 `
 
 const PersonalInfo = () => {
-  const aboutInfo = useStaticQuery(graphql`
+  const personalInfo = useStaticQuery(graphql`
     query {
-      allDatoCmsAboutMe {
+      allDatoCmsPersonalInfo {
         edges {
           node {
             picture {
@@ -51,7 +51,7 @@ const PersonalInfo = () => {
     email,
     github,
     website,
-  } = aboutInfo.allDatoCmsAboutMe.edges[0].node
+  } = personalInfo.allDatoCmsPersonalInfo.edges[0].node
 
   return (
     <>

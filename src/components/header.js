@@ -1,6 +1,6 @@
 import React from "react"
 import { css } from "@emotion/core"
-import Navegacion from "./nav"
+import Navigation from "./navigation"
 
 const Header = () => {
   return (
@@ -9,7 +9,7 @@ const Header = () => {
         background-color: white;
       `}
     >
-      <Navegacion />
+      <Navigation />
     </header>
   )
 }

@@ -1,9 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
-
 import Skills from "../components/skills"
 import AboutMe from "../components/about-me"
-
 import ColLeft from "../components/col-left"
 
 const IndexPage = () => (
@@ -14,7 +12,6 @@ const IndexPage = () => (
           <ColLeft></ColLeft>
         </div>
         <div className="col-right">
-          <h1>About me</h1>
           <AboutMe />
           <Skills />
         </div>
