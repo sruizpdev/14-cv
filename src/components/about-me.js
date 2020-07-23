@@ -1,6 +1,10 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import styled from "@emotion/styled"
 
+const Container = styled.div`
+  margin: 20px;
+`
 const AboutMe = () => {
   const aboutMe = useStaticQuery(graphql`
     query {
@@ -14,7 +18,11 @@ const AboutMe = () => {
     }
   `)
   const { me } = aboutMe.allDatoCmsAboutMe.edges[0].node
-  return <>{me}</>
+  return (
+    <>
+      <Container>{me}</Container>
+    </>
+  )
 }
 
 export default AboutMe

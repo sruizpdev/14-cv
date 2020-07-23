@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import DrawSkill from "./draw-skill"
 
 const Skills = () => {
   const skills = useStaticQuery(graphql`
@@ -7,23 +8,24 @@ const Skills = () => {
       allDatoCmsSkill {
         edges {
           node {
-            skill
+            skill {
+              skillId
+              skillName
+              skillKnowledge
+            }
           }
         }
       }
     }
   `)
-  const skills_array = skills.allDatoCmsSkill.edges
 
+  const array_skills = skills.allDatoCmsSkill.edges[0].node.skill
+  console.log(array_skills)
   return (
     <>
-      {skills_array.map(skill => {
-        return (
-          <ul>
-            <li>{skill.node.skill}</li>
-          </ul>
-        )
-      })}
+      {array_skills.map(skill => (
+        <DrawSkill key={skill.skillName} skill={skill} />
+      ))}
     </>
   )
 }

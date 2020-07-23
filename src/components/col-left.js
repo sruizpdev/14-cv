@@ -3,6 +3,7 @@ import styled from "@emotion/styled"
 import Attachments from "./attachments"
 import SocialProfiles from "./social-profiles"
 import PersonalInfo from "./personal-info"
+import Languages from "./languages"
 
 const Separator = styled.div`
   border-bottom: 2px solid #f5f5f5;
@@ -25,6 +26,10 @@ const ColLeft = () => {
       <H3>Social Profiles</H3>
       <Separator></Separator>
       <SocialProfiles />
+      <Separator></Separator>
+      <H3>Languages</H3>
+      <Separator></Separator>
+      <Languages />
     </>
   )
 }

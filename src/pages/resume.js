@@ -14,7 +14,9 @@ const H3 = styled.h3`
 const Separator = styled.div`
   border-bottom: 2px solid #f5f5f5;
 `
-
+const BigSeparator = styled.div`
+  border-bottom: 20px solid #f5f5f5;
+`
 const ResumePage = () => (
   <Layout>
     <div className="container">
@@ -26,6 +28,9 @@ const ResumePage = () => (
           <H3>Resume</H3>
           <Separator></Separator>
           <ProfessionalExperience />
+          <BigSeparator></BigSeparator>
+          <H3>Education</H3>
+          <Separator></Separator>
           <Education />
         </div>
       </div>

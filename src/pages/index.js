@@ -14,6 +14,9 @@ const H3 = styled.h3`
 const Separator = styled.div`
   border-bottom: 2px solid #f5f5f5;
 `
+const BigSeparator = styled.div`
+  border-bottom: 20px solid #f5f5f5;
+`
 const IndexPage = () => (
   <Layout>
     <div className="container">
@@ -25,6 +28,7 @@ const IndexPage = () => (
           <H3>About me</H3>
           <Separator></Separator>
           <AboutMe />
+          <BigSeparator></BigSeparator>
           <H3>Skills</H3>
           <Separator></Separator>
 

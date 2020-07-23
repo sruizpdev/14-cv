@@ -37,7 +37,7 @@ const Layout = props => {
             background-color: white;
           }
           .col-right {
-            margin-left: 30px;
+            margin-left: 20px;
             @media (min-width: 480px) {
               flex: 3;
             }

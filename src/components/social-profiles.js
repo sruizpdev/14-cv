@@ -10,17 +10,17 @@ const SocialProfiles = () => {
     <>
       <Social>
         <span
-          class="iconify"
+          className="iconify"
           data-icon="ant-design:linkedin-outlined"
           data-inline="false"
         ></span>
         <span
-          class="iconify"
+          className="iconify"
           data-icon="ant-design:github-filled"
           data-inline="false"
         ></span>
         <span
-          class="iconify"
+          className="iconify"
           data-icon="ant-design:skype-outlined"
           data-inline="false"
         ></span>

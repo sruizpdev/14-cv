@@ -24,7 +24,7 @@ const ProfessionalExperience = () => {
   return (
     <>
       {experience.map(exp => (
-        <DrawExperience exp={exp} />
+        <DrawExperience key={exp.company + exp.date} exp={exp} />
       ))}
     </>
   )
