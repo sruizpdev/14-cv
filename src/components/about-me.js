@@ -14,12 +14,7 @@ const AboutMe = () => {
     }
   `)
   const { me } = aboutMe.allDatoCmsAboutMe.edges[0].node
-  return (
-    <>
-      <h1>About me</h1>
-      {me}
-    </>
-  )
+  return <>{me}</>
 }
 
 export default AboutMe
