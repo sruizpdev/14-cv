@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import ColLeft from "../components/col-left"
 import styled from "@emotion/styled"
 import ProfessionalExperience from "../components/prof-experience"
+import Education from "../components/education"
 
 const H3 = styled.h3`
   font-family: "PT Sans", sans-serif;
@@ -25,6 +26,7 @@ const ResumePage = () => (
           <H3>Resume</H3>
           <Separator></Separator>
           <ProfessionalExperience />
+          <Education />
         </div>
       </div>
     </div>

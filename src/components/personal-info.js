@@ -38,7 +38,7 @@ const PersonalInfo = () => {
             phone
             email
             github
-            website
+            web
           }
         }
       }
@@ -50,44 +50,42 @@ const PersonalInfo = () => {
     phone,
     email,
     github,
-    website,
+    web,
   } = personalInfo.allDatoCmsPersonalInfo.edges[0].node
 
   return (
     <>
-      <div className="animated fadeIn ">
-        <Image
-          css={css`
-            margin-bottom: 20px;
-          `}
-          fluid={picture.fluid}
-          alt="name"
-        />
-        <Row>
-          <Col>Name</Col>
-          <Col2>{name}</Col2>
-        </Row>
-        <Row>
-          <Col>Phone</Col>
-          <Col2>{phone}</Col2>
-        </Row>
-        <Row>
-          <Col className="col">Email</Col>
-          <Col2>{email}</Col2>
-        </Row>
-        <Row>
-          <Col>GitHub</Col>
-          <Col2>{github}</Col2>
-        </Row>
-        <Row
-          css={css`
-            margin-bottom: 20px;
-          `}
-        >
-          <Col>Web</Col>
-          <Col2>{website}</Col2>
-        </Row>
-      </div>
+      <Image
+        css={css`
+          margin-bottom: 20px;
+        `}
+        fluid={picture.fluid}
+        alt="name"
+      />
+      <Row>
+        <Col>Name</Col>
+        <Col2>{name}</Col2>
+      </Row>
+      <Row>
+        <Col>Phone</Col>
+        <Col2>{phone}</Col2>
+      </Row>
+      <Row>
+        <Col className="col">Email</Col>
+        <Col2>{email}</Col2>
+      </Row>
+      <Row>
+        <Col>GitHub</Col>
+        <Col2>{github}</Col2>
+      </Row>
+      <Row
+        css={css`
+          margin-bottom: 20px;
+        `}
+      >
+        <Col>Web</Col>
+        <Col2>{web}</Col2>
+      </Row>
     </>
   )
 }

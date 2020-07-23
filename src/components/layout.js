@@ -50,33 +50,6 @@ const Layout = props => {
             padding: 10px;
             margin: 10px;
           }
-          .animated {
-            -webkit-animation-duration: 2s;
-            animation-duration: 2s;
-            -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-          }
-
-          .fast {
-            -webkit-animation-duration: 2s;
-            animation-duration: 2s;
-            -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-          }
-
-          @keyframes fadeIn {
-            from {
-              opacity: 0;
-            }
-
-            to {
-              opacity: 1;
-            }
-          }
-
-          .fadeIn {
-            animation-name: fadeIn;
-          }
         `}
       />
 

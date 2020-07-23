@@ -5,7 +5,7 @@ import DrawExperience from "./draw-exp"
 const ProfessionalExperience = () => {
   const profExp = useStaticQuery(graphql`
     query {
-      allDatoCmsProfessionalExperience {
+      allDatoCmsExperience {
         edges {
           node {
             experience {
@@ -19,8 +19,7 @@ const ProfessionalExperience = () => {
       }
     }
   `)
-  const experience =
-    profExp.allDatoCmsProfessionalExperience.edges[0].node.experience
+  const experience = profExp.allDatoCmsExperience.edges[0].node.experience
 
   return (
     <>
