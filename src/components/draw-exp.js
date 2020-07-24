@@ -3,11 +3,12 @@ import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 
 const Container = styled.div`
-  margin: 20px;
+  margin: 30px;
+  text-align: justify;
 `
 
 const DrawExperience = ({ exp }) => {
-  const { company, date, rol, description } = exp
+  const { company, date, rol, description, technologies } = exp
   return (
     <>
       <Container>
@@ -27,6 +28,14 @@ const DrawExperience = ({ exp }) => {
         </h3>
 
         {description}
+        <p
+          css={css`
+            font-weight: bold;
+          `}
+        >
+          Technologies:
+        </p>
+        {technologies}
       </Container>
     </>
   )

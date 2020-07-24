@@ -2,6 +2,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import { Global, css } from "@emotion/core"
 import Header from "./header"
+import bg from "../images/bg.jpg"
 const Layout = props => {
   return (
     <>
@@ -20,7 +21,7 @@ const Layout = props => {
           .container {
             max-width: 1200px;
             margin: 0 auto;
-            margin-top: 2rem;
+            margin-top: 30px;
           }
           .row {
             display: flex;
@@ -33,13 +34,13 @@ const Layout = props => {
             display: flex;
             flex-direction: column;
             flex-basis: 100%;
-            flex: 1;
+            flex: 1.5;
             background-color: white;
           }
           .col-right {
-            margin-left: 20px;
+            margin-left: 30px;
             @media (min-width: 480px) {
-              flex: 3;
+              flex: 3.5;
             }
           }
           .iconify {
@@ -66,6 +67,7 @@ const Layout = props => {
         <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
       </Helmet>
       <Header />
+
       {props.children}
     </>
   )

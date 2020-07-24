@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import styled from "@emotion/styled"
 
 const Container = styled.div`
-  margin: 20px;
+  margin: 30px;
 `
 const AboutMe = () => {
   const aboutMe = useStaticQuery(graphql`

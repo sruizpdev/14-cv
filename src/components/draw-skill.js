@@ -3,7 +3,7 @@ import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 
 const Container = styled.div`
-  margin: 10px 20px 10px 20px;
+  margin: 10px 30px 10px 30px;
 `
 const Knowledge = styled.div`
   width: 100%;

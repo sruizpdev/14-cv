@@ -8,7 +8,7 @@ const H3 = styled.h3`
   font-family: "PT Sans", sans-serif;
   text-transform: uppercase;
   text-transform: uppercase;
-  margin: 20px;
+  margin: 30px;
 `
 const Separator = styled.div`
   border-bottom: 2px solid #f5f5f5;

@@ -13,6 +13,7 @@ const ProfessionalExperience = () => {
               date
               rol
               description
+              technologies
             }
           }
         }

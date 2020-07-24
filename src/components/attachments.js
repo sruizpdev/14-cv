@@ -6,7 +6,7 @@ const Curriculum = styled.div`
   padding: 1rem;
   background-color: #f5f5f5;
   width: 80%;
-  margin: 20px auto;
+  margin: 30px auto;
   text-align: center;
 `
 const Attachments = () => {

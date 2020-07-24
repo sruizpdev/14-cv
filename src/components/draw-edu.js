@@ -3,7 +3,7 @@ import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 
 const Container = styled.div`
-  margin: 20px;
+  margin: 30px;
 `
 const DrawEdu = ({ edu_item }) => {
   const { school, date, description } = edu_item

@@ -17,6 +17,8 @@ const H3 = styled.h3`
 const ColLeft = () => {
   return (
     <>
+      <H3>Professional Details</H3>
+      <Separator></Separator>
       <PersonalInfo />
       <Separator></Separator>
       <H3>Attachments</H3>

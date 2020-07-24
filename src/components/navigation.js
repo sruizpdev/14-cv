@@ -25,7 +25,6 @@ const Navigation = () => {
           display: flex;
           flex-direction: column;
           align-items: center;
-
           @media (min-width: 480px) {
             flex-direction: row;
             align-items: center;
