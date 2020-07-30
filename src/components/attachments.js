@@ -18,7 +18,8 @@ const Attachments = () => {
             color: black;
             text-decoration: none;
           `}
-          href="http://google.es"
+          href="https://mega.nz/file/oup0lSwB#0AQkoycO3hmvuD_xHnUlAX-SuVWI3rvgUXoZRi8sFl8"
+          target="_blank"
         >
           Curriculum-Vitae.pdf
         </a>

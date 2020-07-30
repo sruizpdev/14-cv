@@ -5,32 +5,22 @@ import AboutMe from "../components/about-me"
 import ColLeft from "../components/col-left"
 import styled from "@emotion/styled"
 
-const H3 = styled.h3`
-  font-family: "PT Sans", sans-serif;
-  text-transform: uppercase;
-  text-transform: uppercase;
-  margin: 30px;
-`
 const Separator = styled.div`
   border-bottom: 2px solid #f5f5f5;
 `
-const BigSeparator = styled.div`
-  border-bottom: 30px solid #f5f5f5;
-`
+
 const IndexPage = () => (
   <Layout>
     <div className="container">
       <div className="row">
-        <div className="col-left">
+        <div className="three column">
           <ColLeft></ColLeft>
         </div>
-        <div className="col-right">
-          <H3>About me</H3>
+        <div className="nine column">
+          <h4>About me</h4>
           <Separator></Separator>
           <AboutMe />
-          <BigSeparator></BigSeparator>
-          <H3>Skills</H3>
-          <Separator></Separator>
+          <h4>Skills</h4>
 
           <Skills />
         </div>

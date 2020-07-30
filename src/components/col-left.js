@@ -8,28 +8,23 @@ import Languages from "./languages"
 const Separator = styled.div`
   border-bottom: 2px solid #f5f5f5;
 `
-const H3 = styled.h3`
-  font-family: "PT Sans", sans-serif;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 1rem;
-`
+
 const ColLeft = () => {
   return (
     <>
-      <H3>Professional Details</H3>
+      <h3>Professional Details</h3>
       <Separator></Separator>
       <PersonalInfo />
       <Separator></Separator>
-      <H3>Attachments</H3>
+      <h3>Attachments</h3>
       <Separator></Separator>
       <Attachments />
       <Separator></Separator>
-      <H3>Social Profiles</H3>
+      <h3>Social Profiles</h3>
       <Separator></Separator>
       <SocialProfiles />
       <Separator></Separator>
-      <H3>Languages</H3>
+      <h3>Languages</h3>
       <Separator></Separator>
       <Languages />
     </>

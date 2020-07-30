@@ -1,27 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
-import styled from "@emotion/styled"
 import { css } from "@emotion/core"
-
-const Row = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  line-height: 3rem;
-`
-const Col = styled.div`
-  padding-left: 20px;
-  display: flex;
-  flex-direction: col;
-  flex-basis: 100%;
-  flex: 1;
-  font-weight: bold;
-`
-const Col2 = styled.div`
-  flex: 2;
-`
 
 const PersonalInfo = () => {
   const personalInfo = useStaticQuery(graphql`
@@ -55,39 +35,40 @@ const PersonalInfo = () => {
 
   return (
     <>
-      <Image
-        css={css`
-          margin-bottom: 20px;
-        `}
-        fluid={picture.fluid}
-        alt="name"
-      />
-      <Row>
-        <Col>Name</Col>
-        <Col2>{name}</Col2>
-      </Row>
-      <Row>
-        <Col>Phone</Col>
-        <Col2>{phone}</Col2>
-      </Row>
-      <Row>
-        <Col className="col">Email</Col>
-        <Col2>{email}</Col2>
-      </Row>
-      <Row>
-        <Col>GitHub</Col>
-        <Col2>{github}</Col2>
-      </Row>
-      <Row
-        css={css`
-          margin-bottom: 20px;
-        `}
-      >
-        <Col>Web</Col>
-        <Col2>{web}</Col2>
-      </Row>
+      <div className="container">
+        <div className="row">
+          <div className="twelve column">
+            <Image
+              css={css`
+                margin-bottom: 20px;
+              `}
+              fluid={picture.fluid}
+              alt="name"
+            />
+          </div>
+        </div>
+        <div className="row">
+          <div className="four column">Name</div>
+          <div className="eight column">{name}</div>
+        </div>
+        <div className="row">
+          <div className="four column">Phone</div>
+          <div className="eight column">{phone}</div>
+        </div>
+        <div className="row">
+          <div className="four column">Email</div>
+          <div className="eight column">{email}</div>
+        </div>
+        <div className="row">
+          <div className="four column">GitHub</div>
+          <div className="eight column">{github}</div>
+        </div>
+        <div className="row">
+          <div className="four column">Web</div>
+          <div className="eight column">{web}</div>
+        </div>
+      </div>
     </>
   )
 }
-
 export default PersonalInfo

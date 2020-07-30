@@ -1,13 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
-import styled from "@emotion/styled"
 import { css } from "@emotion/core"
-
-const Thumb = styled.div`
-  padding: 10px;
-  border: 1px solid #f5f5f5;
-`
 
 const Portfolio = () => {
   const portfolioData = useStaticQuery(graphql`
@@ -39,24 +33,25 @@ const Portfolio = () => {
         const { title, description, image, link } = page
         return (
           <>
-            <Thumb key={page.link}>
-              {title}
-              <a href={link}>
-                <Image
-                  css={css`
-                    width: 200px;
-                  `}
-                  fluid={image.fluid}
-                  alt=""
-                />
-              </a>
-              {description}
-            </Thumb>
+            <h3>{title}</h3>
+            <div className="row">
+              <div className="four column">
+                <a href={link}>
+                  <Image
+                    css={css`
+                      width: 100%;
+                    `}
+                    fluid={image.fluid}
+                    alt={title}
+                  />
+                </a>
+              </div>
+              <div className="eight column">{description}</div>
+            </div>
           </>
         )
       })}
     </>
   )
 }
-
 export default Portfolio
