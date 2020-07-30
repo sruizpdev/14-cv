@@ -16,7 +16,7 @@ const PortfolioPage = () => (
           <ColLeft></ColLeft>
         </div>
         <div className="nine column">
-          <h3>Portfolio</h3>
+          <span className="title">Portfolio</span>
           <Separator></Separator>
           <Portfolio />
         </div>

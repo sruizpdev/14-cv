@@ -17,7 +17,7 @@ const ContactMePage = () => (
           <ColLeft></ColLeft>
         </div>
         <div className="nine column">
-          <h3>Contact me</h3>
+          <span className="title">Contact me</span>
           <Separator></Separator>
           <ContactForm></ContactForm>
         </div>

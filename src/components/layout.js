@@ -1,6 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import Header from "./header"
+import Navigation from "./navigation"
+
 const Layout = props => {
   return (
     <>
@@ -21,7 +22,7 @@ const Layout = props => {
 
         <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
       </Helmet>
-      <Header />
+      <Navigation />
 
       {props.children}
     </>

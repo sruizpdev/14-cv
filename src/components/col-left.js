@@ -5,27 +5,23 @@ import SocialProfiles from "./social-profiles"
 import PersonalInfo from "./personal-info"
 import Languages from "./languages"
 
-const Separator = styled.div`
-  border-bottom: 2px solid #f5f5f5;
-`
-
 const ColLeft = () => {
   return (
     <>
-      <h3>Professional Details</h3>
-      <Separator></Separator>
+      <span className="title center">Professional Details</span>
+      <div className="separator"></div>
       <PersonalInfo />
-      <Separator></Separator>
-      <h3>Attachments</h3>
-      <Separator></Separator>
+      <div className="separator"></div>
+      <span className="title center">Attachments</span>
+      <div className="separator"></div>
       <Attachments />
-      <Separator></Separator>
-      <h3>Social Profiles</h3>
-      <Separator></Separator>
+      <div className="separator"></div>
+      <span className="title center">Social Profiles</span>
+      <div className="separator"></div>
       <SocialProfiles />
-      <Separator></Separator>
-      <h3>Languages</h3>
-      <Separator></Separator>
+      <div className="separator"></div>
+      <span className="title center">Languages</span>
+      <div className="separator"></div>
       <Languages />
     </>
   )

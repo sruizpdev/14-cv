@@ -33,7 +33,7 @@ const Portfolio = () => {
         const { title, description, image, link } = page
         return (
           <>
-            <h3>{title}</h3>
+            <span className="title">{title}</span>
             <div className="row">
               <div className="four column">
                 <a href={link}>

@@ -8,7 +8,7 @@ const DrawExperience = ({ exp }) => {
         <h4>
           {company} ( {date} )
         </h4>
-        <h3>{rol}</h3>
+        <span className="title">{rol}</span>
 
         {description}
         <p>Technologies:</p>

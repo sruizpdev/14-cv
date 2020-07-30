@@ -32,49 +32,25 @@ const Skills = () => {
     height: 30px;
     background-color: #f5f5f5;
   `
-  const Row = styled.div`
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    margin: 20px 0;
-    align-items: center;
-  `
-  const ColLeft = styled.div`
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
-    padding-left: 30px;
-  `
-  const ColRight = styled.div`
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 11;
-    padding-right: 30px;
-  `
-  const Container = styled.div`
-    margin-top: 30px;
-  `
 
   return (
     <>
-      <Container>
+      <div className="container">
         {array_skills.map(skill => {
           const { skillName, skillKnowledge } = skill
           return (
             <>
-              <Row>
-                <ColLeft>
+              <div className="row">
+                <div className="one column">
                   <Image
                     css={css`
-                      width: 40px;
+                      width: 100%;
                     `}
                     fluid={skill.logo.fluid}
                     alt={skill.skill_name}
                   />
-                </ColLeft>
-                <ColRight>
+                </div>
+                <div className="eleven column">
                   <Knowledge>
                     <div
                       css={css`
@@ -90,12 +66,12 @@ const Skills = () => {
                       {skillName} - {skillKnowledge}%
                     </div>
                   </Knowledge>
-                </ColRight>
-              </Row>
+                </div>
+              </div>
             </>
           )
         })}
-      </Container>
+      </div>
     </>
   )
 }

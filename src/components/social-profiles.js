@@ -1,14 +1,9 @@
 import React from "react"
-import styled from "@emotion/styled"
 
-const Social = styled.div`
-  display: flex;
-  justify-content: space-around;
-`
 const SocialProfiles = () => {
   return (
     <>
-      <Social>
+      <div className="container center">
         <span
           className="iconify"
           data-icon="ant-design:linkedin-outlined"
@@ -24,7 +19,7 @@ const SocialProfiles = () => {
           data-icon="ant-design:skype-outlined"
           data-inline="false"
         ></span>
-      </Social>
+      </div>
     </>
   )
 }
