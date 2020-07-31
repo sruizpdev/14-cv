@@ -1,5 +1,4 @@
 import React from "react"
-import styled from "@emotion/styled"
 import Attachments from "./attachments"
 import SocialProfiles from "./social-profiles"
 import PersonalInfo from "./personal-info"
@@ -8,9 +7,13 @@ import Languages from "./languages"
 const ColLeft = () => {
   return (
     <>
-      <span className="title center">Professional Details</span>
-      <div className="separator"></div>
-      <PersonalInfo />
+      <div className="container">
+        <div className="title">Professional Details</div>
+        <div className="content">
+          <PersonalInfo />
+        </div>
+      </div>
+
       <div className="separator"></div>
       <span className="title center">Attachments</span>
       <div className="separator"></div>

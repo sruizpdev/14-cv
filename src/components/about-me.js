@@ -16,7 +16,10 @@ const AboutMe = () => {
   const { me } = aboutMe.allDatoCmsAboutMe.edges[0].node
   return (
     <>
-      <div className="container">{me}</div>
+      <div className="container">
+        <div className="title">About me</div>
+        <div className="content">{me}</div>
+      </div>
     </>
   )
 }

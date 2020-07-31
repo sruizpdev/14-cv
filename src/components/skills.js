@@ -4,6 +4,20 @@ import Image from "gatsby-image"
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
 
+const Skill = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 11fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 2px;
+`
+const Logo = styled.div`
+  grid-area: 1 / 1 / 2 / 2;
+`
+const Percentage = styled.div`
+  grid-area: 1 / 2 / 2 / 3;
+`
+
 const Skills = () => {
   const skills = useStaticQuery(graphql`
     query {
@@ -36,41 +50,44 @@ const Skills = () => {
   return (
     <>
       <div className="container">
-        {array_skills.map(skill => {
-          const { skillName, skillKnowledge } = skill
-          return (
-            <>
-              <div className="row">
-                <div className="one column">
-                  <Image
-                    css={css`
-                      width: 100%;
-                    `}
-                    fluid={skill.logo.fluid}
-                    alt={skill.skill_name}
-                  />
-                </div>
-                <div className="eleven column">
-                  <Knowledge>
-                    <div
+        <div className="title">Skills</div>
+        <div className="content">
+          {array_skills.map(skill => {
+            const { skillName, skillKnowledge } = skill
+            return (
+              <>
+                <Skill>
+                  <Logo>
+                    <Image
                       css={css`
-                        display: flex;
-                        align-items: center;
-                        padding-left: 10px;
-                        width: ${skillKnowledge}%;
-                        background-color: #337ab7;
-                        height: 30px;
-                        color: white;
+                        width: 50px;
                       `}
-                    >
-                      {skillName} - {skillKnowledge}%
-                    </div>
-                  </Knowledge>
-                </div>
-              </div>
-            </>
-          )
-        })}
+                      fluid={skill.logo.fluid}
+                      alt={skill.skill_name}
+                    />
+                  </Logo>
+                  <Percentage>
+                    <Knowledge>
+                      <div
+                        css={css`
+                          display: flex;
+                          align-items: center;
+                          padding-left: 10px;
+                          width: ${skillKnowledge}%;
+                          background-color: #337ab7;
+                          height: 30px;
+                          color: white;
+                        `}
+                      >
+                        {skillName} - {skillKnowledge}%
+                      </div>
+                    </Knowledge>
+                  </Percentage>
+                </Skill>
+              </>
+            )
+          })}
+        </div>
       </div>
     </>
   )

@@ -6,19 +6,13 @@ import ColLeft from "../components/col-left"
 
 const IndexPage = () => (
   <Layout>
-    <div className="container">
-      <div className="row">
-        <div className="three column">
-          <ColLeft />
-        </div>
-        <div className="nine column">
-          <span className="title">About me</span>
-          <div className="separator"></div>
-          <AboutMe />
-          <span className="title">Skills</span>
-          <div className="separator"></div>
-          <Skills />
-        </div>
+    <div class="parent">
+      <div class="col-left bg-white">
+        <ColLeft />
+      </div>
+      <div class="col-right bg-white">
+        <AboutMe />
+        <Skills />
       </div>
     </div>
   </Layout>
