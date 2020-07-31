@@ -43,7 +43,8 @@ const Portfolio = styled.div`
   }
 `
 const ContactMe = styled.div`
-  grid-area: 4 / 1 / 5 / 2 @media (min-width: 425px) {
+  grid-area: 4 / 1 / 5 / 2;
+  @media (min-width: 425px) {
     grid-area: 1 / 4 / 2 / 5;
   }
 `
