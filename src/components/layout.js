@@ -58,7 +58,6 @@ const Layout = props => {
           }
           .title {
             grid-area: 1 / 1 / 2 / 2;
-            border-bottom: 1px solid #f5f5f5;
             display: flex;
             align-items: center;
           }
@@ -66,7 +65,8 @@ const Layout = props => {
           .content {
             grid-area: 3 / 1 / 4 / 2;
             background-color: white;
-            border-bottom: 1px solid #f5f5f5;
+            border-bottom: 3px solid #f5f5f5;
+            border-top: 3px solid #f5f5f5;
             padding: 20px;
           }
 
@@ -87,6 +87,9 @@ const Layout = props => {
           }
           .title {
             font-weight: 700;
+          }
+          h4 {
+            margin: 0;
           }
         `}
       />

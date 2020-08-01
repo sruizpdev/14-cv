@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import DrawEdu from "./draw-edu"
 
 const Education = () => {
   const edu = useStaticQuery(graphql`
@@ -22,9 +21,22 @@ const Education = () => {
 
   return (
     <>
-      {edu_array.map(edu_item => (
-        <DrawEdu edu_item={edu_item} />
-      ))}
+      <div className="container">
+        <div className="title ml-20">Education</div>
+        <div className="content">
+          {edu_array.map(edu_item => {
+            const { school, date, description } = edu_item
+            return (
+              <div key={edu_item.description}>
+                <h4>
+                  {school} ( {date} )
+                </h4>
+                {description}
+              </div>
+            )
+          })}
+        </div>
+      </div>
     </>
   )
 }

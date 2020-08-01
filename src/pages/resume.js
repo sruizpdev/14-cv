@@ -3,41 +3,18 @@ import Layout from "../components/layout"
 import GeneralInfo from "../components/general-info"
 import ProfessionalExperience from "../components/prof-experience"
 import Education from "../components/education"
-import styled from "@emotion/styled"
-
-const Parent = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  @media (min-width: 425px) {
-    flex-direction: row;
-  }
-`
-const ColLeft = styled.div`
-  flex: 1;
-`
-const ColRight = styled.div`
-  flex: 1;
-  @media (min-width: 425px) {
-    flex: 3;
-  }
-`
 
 const ResumePage = () => (
   <Layout>
-    <Parent>
-      <ColLeft>
+    <div className="parent">
+      <div className="col-left">
         <GeneralInfo />
-      </ColLeft>
-      <ColRight>
-        <span className="title">Resume</span>
-        <div className="separator"></div>
+      </div>
+      <div className="col-right">
         <ProfessionalExperience />
-        <span className="title">Education</span>
         <Education />
-      </ColRight>
-    </Parent>
+      </div>
+    </div>
   </Layout>
 )
 
