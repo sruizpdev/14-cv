@@ -1,25 +1,16 @@
 import React from "react"
-import styled from "@emotion/styled"
 import Layout from "../components/layout"
 import GeneralInfo from "../components/general-info"
-import Portfolio from "../components/portfolio"
-
-const Separator = styled.div`
-  border-bottom: 2px solid #f5f5f5;
-`
+import Works from "../components/Works"
 
 const PortfolioPage = () => (
   <Layout>
-    <div className="container">
-      <div className="row">
-        <div className="three column">
-          <GeneralInfo />
-        </div>
-        <div className="nine column">
-          <span className="title">Portfolio</span>
-          <Separator></Separator>
-          <Portfolio />
-        </div>
+    <div className="parent">
+      <div className="col-left">
+        <GeneralInfo />
+      </div>
+      <div className="col-right">
+        <Works />
       </div>
     </div>
   </Layout>
