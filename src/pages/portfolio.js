@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import Layout from "../components/layout"
-import ColLeft from "../components/col-left"
+import GeneralInfo from "../components/general-info"
 import Portfolio from "../components/portfolio"
 
 const Separator = styled.div`
@@ -13,7 +13,7 @@ const PortfolioPage = () => (
     <div className="container">
       <div className="row">
         <div className="three column">
-          <ColLeft></ColLeft>
+          <GeneralInfo />
         </div>
         <div className="nine column">
           <span className="title">Portfolio</span>

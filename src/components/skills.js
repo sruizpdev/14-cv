@@ -8,13 +8,14 @@ const Skill = styled.div`
   display: grid;
   grid-template-columns: 1fr 11fr;
   grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 2px;
+  margin-bottom: 20px;
 `
 const Logo = styled.div`
   grid-area: 1 / 1 / 2 / 2;
 `
 const Percentage = styled.div`
+  display: flex;
+  align-items: center;
   grid-area: 1 / 2 / 2 / 3;
 `
 
@@ -50,7 +51,7 @@ const Skills = () => {
   return (
     <>
       <div className="container">
-        <div className="title">Skills</div>
+        <div className="title ml-20">Skills</div>
         <div className="content">
           {array_skills.map(skill => {
             const { skillName, skillKnowledge } = skill
@@ -60,7 +61,7 @@ const Skills = () => {
                   <Logo>
                     <Image
                       css={css`
-                        width: 50px;
+                        width: 60px;
                       `}
                       fluid={skill.logo.fluid}
                       alt={skill.skill_name}

@@ -1,13 +1,12 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
-import { css } from "@emotion/core"
 import styled from "@emotion/styled"
 
 const ContainerInfo = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: 1fr auto;
   grid-column-gap: 0px;
   grid-row-gap: 10px;
 `
@@ -16,6 +15,8 @@ const Photo = styled.div`
 `
 const ContainerData = styled.div`
   grid-area: 2 / 1 / 3 / 2;
+  display: flex;
+  align-items: center;
 `
 const PersonalData = styled.div`
   display: grid;
@@ -88,13 +89,7 @@ const PersonalInfo = () => {
     <>
       <ContainerInfo>
         <Photo>
-          <Image
-            css={css`
-              margin-bottom: 20px;
-            `}
-            fluid={picture.fluid}
-            alt="name"
-          />
+          <Image fluid={picture.fluid} alt="name" />
         </Photo>
         <ContainerData>
           <PersonalData>

@@ -17,7 +17,7 @@ const AboutMe = () => {
   return (
     <>
       <div className="container">
-        <div className="title">About me</div>
+        <div className="title ml-20">About me</div>
         <div className="content">{me}</div>
       </div>
     </>

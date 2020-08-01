@@ -4,7 +4,7 @@ import styled from "@emotion/styled"
 
 const ContainerNavBar = styled.div`
   background-color: white;
-  @media (min-width: 425px) {
+  @media (min-width: 768px) {
     height: 50px;
   }
 `
@@ -16,7 +16,7 @@ const NavBar = styled.div`
   grid-template-rows: repeat(4, 50px);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  @media (min-width: 425px) {
+  @media (min-width: 768px) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 50px;
@@ -26,25 +26,25 @@ const NavBar = styled.div`
 `
 const AboutMe = styled.div`
   grid-area: 1 / 1 / 2 / 2;
-  @media (min-width: 425px) {
+  @media (min-width: 768px) {
     grid-area: 1 / 1 / 2 / 2;
   }
 `
 const Resume = styled.div`
   grid-area: 2 / 1 / 3 / 2;
-  @media (min-width: 425px) {
+  @media (min-width: 768px) {
     grid-area: 1 / 2 / 2 / 3;
   }
 `
 const Portfolio = styled.div`
   grid-area: 3 / 1 / 4 / 2;
-  @media (min-width: 425px) {
+  @media (min-width: 768px) {
     grid-area: 1 / 3 / 2 / 4;
   }
 `
 const ContactMe = styled.div`
   grid-area: 4 / 1 / 5 / 2;
-  @media (min-width: 425px) {
+  @media (min-width: 768px) {
     grid-area: 1 / 4 / 2 / 5;
   }
 `

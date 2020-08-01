@@ -2,15 +2,15 @@ import React from "react"
 import Layout from "../components/layout"
 import Skills from "../components/skills"
 import AboutMe from "../components/about-me"
-import ColLeft from "../components/col-left"
+import GeneralInfo from "../components/general-info"
 
 const IndexPage = () => (
   <Layout>
-    <div class="parent">
-      <div class="col-left bg-white">
-        <ColLeft />
+    <div className="parent">
+      <div className="col-left">
+        <GeneralInfo />
       </div>
-      <div class="col-right bg-white">
+      <div className="col-right">
         <AboutMe />
         <Skills />
       </div>
