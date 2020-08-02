@@ -29,10 +29,11 @@ const Layout = props => {
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            margin-top: 100px;
+
             flex-direction: column;
 
             @media (min-width: 768px) {
+              margin-top: 100px;
               flex-direction: row;
             }
           }
