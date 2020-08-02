@@ -3,6 +3,7 @@ import Attachments from "./attachments"
 import SocialProfiles from "./social-profiles"
 import PersonalInfo from "./personal-info"
 import Languages from "./languages"
+import ContactForm from "./contact-form"
 
 const GeneralInfo = () => {
   return (
@@ -29,6 +30,12 @@ const GeneralInfo = () => {
         <span className="title center">Languages</span>
         <div className="content">
           <Languages />
+        </div>
+      </div>
+      <div className="container">
+        <span className="title center">Contact me</span>
+        <div className="content">
+          <ContactForm />
         </div>
       </div>
     </>

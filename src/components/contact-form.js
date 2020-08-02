@@ -1,21 +1,13 @@
 import React from "react"
+
 const ContactForm = () => {
   return (
-    <>
-      <form>
-        <input type="email" placeholder="Email" />
-        <input type="text" placeholder="Subject" />
-        <textarea
-          name="message"
-          id=""
-          cols="30"
-          rows="10"
-          placeholder="Message"
-        ></textarea>
-        <input type="submit" value="Send message" />
-      </form>
-    </>
+    <form action="https://formspree.io/mqkynbyp" method="POST">
+      <input type="name" name="_name" placeholder="Name" />
+      <input type="email" name="_replyto" placeholder="e-mail" />
+      <textarea name="message" placeholder="Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
   )
 }
-
 export default ContactForm

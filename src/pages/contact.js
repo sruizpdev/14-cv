@@ -11,15 +11,16 @@ const Separator = styled.div`
 
 const ContactMePage = () => (
   <Layout>
-    <div className="container">
-      <div className="row">
-        <div className="three column">
-          <GeneralInfo />
-        </div>
-        <div className="nine column">
-          <span className="title">Contact me</span>
-          <Separator></Separator>
-          <ContactForm></ContactForm>
+    <div className="parent">
+      <div className="col-left">
+        <GeneralInfo />
+      </div>
+      <div className="col-right">
+        <div className="container">
+          <div className="title ml-20">Contact me</div>
+          <div className="content">
+            <ContactForm></ContactForm>
+          </div>
         </div>
       </div>
     </div>

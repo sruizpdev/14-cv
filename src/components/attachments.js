@@ -16,7 +16,7 @@ const Attachments = () => {
             color: black;
             text-decoration: none;
           `}
-          href="https://mega.nz/file/oup0lSwB#0AQkoycO3hmvuD_xHnUlAX-SuVWI3rvgUXoZRi8sFl8"
+          href="https://www.datocms-assets.com/31437/1596389111-cvsergioruizen.pdf"
           target="_blank"
         >
           Curriculum-Vitae.pdf

@@ -10,7 +10,7 @@ const Work = styled.div`
   grid-template-rows: repeat(2, 1fr);
 
   @media (min-width: 768px) {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr;
   }
 `
@@ -30,6 +30,7 @@ const DescriptionWork = styled.div`
     grid-area: 1 / 2 / 2 / 3;
   }
 `
+
 const Works = () => {
   const portfolioData = useStaticQuery(graphql`
     query {
@@ -39,6 +40,11 @@ const Works = () => {
             portfolio {
               title
               image {
+                fluid {
+                  ...GatsbyDatoCmsFluid
+                }
+              }
+              mobile {
                 fluid {
                   ...GatsbyDatoCmsFluid
                 }
@@ -66,6 +72,7 @@ const Works = () => {
               title,
               description,
               image,
+              mobile,
               link,
               technologies,
               github,
@@ -78,32 +85,56 @@ const Works = () => {
                       css={css`
                         width: 100%;
                       `}
-                      fluid={image.fluid}
+                      fluid={mobile.fluid}
                       alt={title}
                     />
                   </ImageWork>
                   <DescriptionWork>
-                    {description}
-                    {technologies}
-                    <a
+                    <h3
                       css={css`
-                        text-decoration: none;
-                        color: #337ab7;
+                        margin: 0;
                       `}
-                      href={github}
                     >
-                      GitHub >>
-                    </a>
-
-                    <p>
+                      Description:
+                    </h3>
+                    {description}
+                    <h3
+                      css={css`
+                        margin: 10px 0 0 0;
+                      `}
+                    >
+                      Technologies:
+                    </h3>
+                    {technologies}
+                    <p
+                      css={css`
+                        margin: 10px 0 0 0;
+                      `}
+                    >
                       <a
                         css={css`
                           text-decoration: none;
                           color: #337ab7;
                         `}
+                        href={github}
+                      >
+                        GitHub code>>
+                      </a>
+                    </p>
+                    <p
+                      css={css`
+                        margin: 10px 0;
+                      `}
+                    >
+                      <a
+                        css={css`
+                          margin: 0;
+                          text-decoration: none;
+                          color: #337ab7;
+                        `}
                         href={link}
                       >
-                        Open >>
+                        Open in a browser>>
                       </a>
                     </p>
                   </DescriptionWork>

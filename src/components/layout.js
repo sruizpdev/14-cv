@@ -86,8 +86,39 @@ const Layout = props => {
             background-color: white;
           }
           .title {
-            font-weight: 700;
+            font-size: 3rem;
           }
+          form {
+            display: flex;
+            flex-direction: column;
+          }
+          form input {
+            border: none;
+            background-color: #f5f5f5;
+            padding: 1rem;
+            margin-bottom: 20px;
+          }
+          textarea {
+            border: none;
+            background-color: #f5f5f5;
+            margin: 20px 0;
+            height: 100px;
+            padding: 1rem;
+          }
+          form button {
+            color: white;
+            margin-top: 20px;
+            border: none;
+            padding: 1rem;
+            cursor: pointer;
+            background-color: #337ab7;
+            &:hover {
+              border: none;
+              background-color: #f5f5f5;
+              color: #337ab7;
+            }
+          }
+
           h4 {
             margin: 0;
           }
