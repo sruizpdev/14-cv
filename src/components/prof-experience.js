@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import { css } from "@emotion/core"
 
 const ProfessionalExperience = () => {
   const profExp = useStaticQuery(graphql`
@@ -30,12 +31,35 @@ const ProfessionalExperience = () => {
             const { company, date, rol, description, technologies } = exp
             return (
               <div key={exp.company + exp.date}>
-                <h3>
+                <span
+                  css={css`
+                    color: #337ab7;
+                    font-size: 1.5rem;
+                    display: block;
+                  `}
+                >
+                  {rol}
+                </span>
+                <span
+                  css={css`
+                    color: gray;
+                  `}
+                >
                   {company} ( {date} )
-                </h3>
-                <h3>{rol}</h3>
-                {description}
-                <p>Technologies: {technologies}</p>
+                </span>
+
+                <p>{description}</p>
+                <p>
+                  {" "}
+                  <span
+                    css={css`
+                      font-weight: bold;
+                    `}
+                  >
+                    Technologies:
+                  </span>{" "}
+                  {technologies}
+                </p>
               </div>
             )
           })}

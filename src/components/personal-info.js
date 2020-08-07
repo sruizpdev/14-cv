@@ -21,7 +21,7 @@ const ContainerData = styled.div`
 const PersonalData = styled.div`
   display: grid;
   grid-template-columns: 3fr 10px 3fr;
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 10px;
 `
@@ -49,12 +49,7 @@ const GitHubTitle = styled.div`
 const GitHub = styled.div`
   grid-area: 4 / 3 / 5 / 4;
 `
-const WebTitle = styled.div`
-  grid-area: 5 / 1 / 6 / 2;
-`
-const Web = styled.div`
-  grid-area: 5 / 3 / 6 / 4;
-`
+
 const PersonalInfo = () => {
   const personalInfo = useStaticQuery(graphql`
     query {
@@ -70,7 +65,6 @@ const PersonalInfo = () => {
             phone
             email
             github
-            web
           }
         }
       }
@@ -82,7 +76,6 @@ const PersonalInfo = () => {
     phone,
     email,
     github,
-    web,
   } = personalInfo.allDatoCmsPersonalInfo.edges[0].node
 
   return (
@@ -101,8 +94,6 @@ const PersonalInfo = () => {
             <Email>{email}</Email>
             <GitHubTitle>GitHub:</GitHubTitle>
             <GitHub>{github}</GitHub>
-            <WebTitle>Web:</WebTitle>
-            <Web>{web}</Web>
           </PersonalData>
         </ContainerData>
       </ContainerInfo>

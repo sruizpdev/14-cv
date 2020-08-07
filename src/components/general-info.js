@@ -32,12 +32,6 @@ const GeneralInfo = () => {
           <Languages />
         </div>
       </div>
-      <div className="container">
-        <span className="title center">Contact me</span>
-        <div className="content">
-          <ContactForm />
-        </div>
-      </div>
     </>
   )
 }

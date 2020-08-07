@@ -10,7 +10,6 @@ const Layout = props => {
         styles={css`
           @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
           html {
-            font-size: 62.5%;
             box-sizing: border-box;
           }
           *,
@@ -19,8 +18,6 @@ const Layout = props => {
             box-sizing: inherit;
           }
           body {
-            font-size: 18px;
-            font-size: 1.8rem;
             line-height: 1.5;
             font-family: "PT Sans", sans-serif;
             background-color: #f5f5f5;
@@ -87,7 +84,8 @@ const Layout = props => {
             background-color: white;
           }
           .title {
-            font-size: 3rem;
+            font-size: 1.5rem;
+            font-weight: 700;
           }
           form {
             display: flex;
@@ -118,10 +116,6 @@ const Layout = props => {
               background-color: #f5f5f5;
               color: #337ab7;
             }
-          }
-
-          h4 {
-            margin: 0;
           }
         `}
       />
