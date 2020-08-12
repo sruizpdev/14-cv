@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import GeneralInfo from "../components/general-info"
-import Works from "../components/Works"
+import Works from "../components/works"
 
 const PortfolioPage = () => (
   <Layout>
