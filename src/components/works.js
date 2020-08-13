@@ -71,7 +71,6 @@ const Works = () => {
             const {
               title,
               description,
-              image,
               mobile,
               link,
               technologies,
